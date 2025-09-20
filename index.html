@@ -21,9 +21,9 @@
       }
     </style>
   </head>
-  <body class="font-david-libre w-8/12 mx-auto">
+  <body class="font-david-libre">
     <!-- Header -->
-    <header class=" flex justify-between items-center py-4">
+    <header class="w-8/12 mx-auto flex justify-between items-center py-4">
       <div class="flex items-center gap-2">
         <img
           class="text-[#EA6D27] w-10"
@@ -53,7 +53,7 @@
     <main>
       <!-- Banner Section -->
       <section
-        class=" mt-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-16 md:py-24"
+        class="w-8/12 mx-auto mt-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-16 md:py-24"
       >
         <!-- Left side -->
         <div class="relative flex-1 text-center md:text-left">
@@ -132,6 +132,49 @@
             alt="dish"
             class="absolute -bottom-4 -left-12 md:-bottom-6 md:-left-20 w-56 md:w-80 drop-shadow-2xl"
           />
+        </div>
+      </section>
+
+      <!-- Dishes section -->
+      <section class="text-center bg-gray-200 mt-20">
+        <h1 class="text-5xl font-bold pt-15 pb-8">Our Special Dishes</h1>
+        <p class="text-sm text-gray-500 pb-15">
+          Lorem ipsum dolor sit amet, consectetur <br />
+          adipiscing elit, sed do eiusmod tempor incididunt
+        </p>
+
+        <!-- Card div -->
+        <div>
+          <!-- 1st card -->
+          <div
+            class="relative max-w-xs bg-white pt-16 pb-6 px-6 rounded-tl-2xl rounded-br-2xl shadow-lg text-center mx-auto"
+          >
+            <!-- Dish with price -->
+            <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40">
+              <!-- Dish image -->
+              <img
+                src="assets/resources/dish-1 1.png"
+                alt="dish"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
+              />
+
+              <!-- Price badge -->
+              <div
+                class="absolute top-2 right-2 bg-black text-white text-sm font-semibold px-3 py-1 rounded-full shadow-md"
+              >
+                $12
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="mt-4 text-lg font-semibold">Lumpia with Suace</h2>
+
+            <!-- Description -->
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+              Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod
+              tempor
+            </p>
+          </div>
         </div>
       </section>
     </main>
