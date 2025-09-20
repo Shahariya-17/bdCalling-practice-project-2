@@ -14,31 +14,126 @@
       rel="stylesheet"
     />
     <style>
-      .font-david-libre{
+      .font-david-libre {
         font-family: "David Libre", serif;
         font-weight: 400;
         font-style: normal;
       }
     </style>
   </head>
-  <body class="font-david-libre w-10/12 mx-auto">
-    <header class="flex justify-between items-center py-4">
-        <div class="flex items-center gap-2">
-            <img class="text-[#EA6D27] w-10" src="assets/logo/flatware_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
-            <h1 class="text-xl font-semibold">restaurant</h1>
-        </div>
-        <div>
-            <ul class="flex gap-8">
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Events </a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <button class="bg-[#EA6D27] text-white px-3 py-2  rounded-tl-xl rounded-br-xl">Book a table </button>
-        </div>
+  <body class="font-david-libre w-8/12 mx-auto">
+    <!-- Header -->
+    <header class=" flex justify-between items-center py-4">
+      <div class="flex items-center gap-2">
+        <img
+          class="text-[#EA6D27] w-10"
+          src="assets/logo/flatware_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+          alt=""
+        />
+        <h1 class="text-xl font-semibold">restaurant</h1>
+      </div>
+      <div class="hidden md:block">
+        <ul class="flex gap-8">
+          <li class="hover:text-[#EA6D27]"><a href="#">Menu</a></li>
+          <li class="hover:text-[#EA6D27]"><a href="#">Events </a></li>
+          <li class="hover:text-[#EA6D27]"><a href="#">Gallery</a></li>
+          <li class="hover:text-[#EA6D27]"><a href="#">About</a></li>
+          <li class="hover:text-[#EA6D27]"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <button
+          class="bg-[#EA6D27] text-white px-3 py-2 rounded-tl-xl rounded-br-xl"
+        >
+          Book a table
+        </button>
+      </div>
     </header>
+
+    <main>
+      <!-- Banner Section -->
+      <section
+        class=" mt-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-16 md:py-24"
+      >
+        <!-- Left side -->
+        <div class="relative flex-1 text-center md:text-left">
+          <!-- Circle text -->
+          <div class="absolute -left-25 -mt-45 top-0 hidden md:block">
+            <svg viewBox="0 0 200 200" class="w-40 h-40">
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
+                />
+              </defs>
+              <text
+                fill="black"
+                font-size="25"
+                letter-spacing="3"
+                font-family="David Libre, serif"
+              >
+                <textPath href="#circlePath">
+                  FOODS DELICIOUS FOODS DELICIOUS
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <h2
+            class="text-3xl md:text-5xl font-semibold leading-snug md:leading-tight max-w-md mx-auto md:mx-0"
+          >
+            We provide the <br />
+            best food for you
+          </h2>
+          <p
+            class="mt-4 text-gray-500 text-sm md:text-base leading-relaxed max-w-sm mx-auto md:mx-0"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex justify-center md:justify-start gap-4 mt-8">
+            <button
+              class="bg-black text-white px-6 py-2 rounded-tl-xl rounded-br-xl hover:bg-gray-800 transition"
+            >
+              Menu
+            </button>
+            <button
+              class="bg-[#EA6D27] text-white px-6 py-2 rounded-tl-xl rounded-br-xl hover:bg-[#d45d1f] transition"
+            >
+              Book a table
+            </button>
+          </div>
+
+          <!-- Social icons -->
+          <div class="flex justify-center md:justify-start gap-5 mt-10">
+            <img src="assets/logo/image 1.png" alt="facebook" class="w-6 h-6" />
+            <img
+              src="assets/logo/icons8-instagram 1.png"
+              alt="instagram"
+              class="w-6 h-6"
+            />
+            <img src="assets/logo/image 2.png" alt="twitter" class="w-6 h-6" />
+          </div>
+        </div>
+
+        <!-- Right side (Images) -->
+        <div class="relative flex-1 flex justify-center">
+          <!-- Background big image -->
+          <img
+            src="assets/resources/Mask group.png"
+            alt="restaurant"
+            class="w-[300px] h-[500px] md:w-[516px] md:h-[716px] object-cover rounded-3xl"
+          />
+
+          <!-- Dish image -->
+          <img
+            src="assets/resources/dish-2 1.png"
+            alt="dish"
+            class="absolute -bottom-4 -left-12 md:-bottom-6 md:-left-20 w-56 md:w-80 drop-shadow-2xl"
+          />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
