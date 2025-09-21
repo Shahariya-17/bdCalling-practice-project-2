@@ -23,61 +23,79 @@
   </head>
   <body class="font-david-libre">
     <!-- Header -->
-    <header class="w-8/12 mx-auto flex justify-between items-center py-4">
-      <div class="flex items-center gap-2">
-        <img
-          class="text-[#EA6D27] w-10"
-          src="assets/logo/flatware_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
-          alt=""
-        />
-        <h1 class="text-xl font-semibold">restaurant</h1>
+    <header
+      class="fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4 md:px-0"
+    >
+      <div
+        class="w-full md:w-8/12 mx-auto flex justify-between items-center py-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img
+            class="text-[#EA6D27] w-10"
+            src="assets/logo/flatware_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+            alt="Logo"
+          />
+          <h1 class="text-xl font-semibold">restaurant</h1>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:block">
+          <ul class="flex gap-8">
+            <li class="hover:text-[#EA6D27]"><a href="#">Menu</a></li>
+            <li class="hover:text-[#EA6D27]"><a href="#">Events</a></li>
+            <li class="hover:text-[#EA6D27]"><a href="#">Gallery</a></li>
+            <li class="hover:text-[#EA6D27]"><a href="#">About</a></li>
+            <li class="hover:text-[#EA6D27]"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- CTA + Mobile Menu -->
+        <div class="flex items-center gap-4">
+          <button
+            class="hidden md:block bg-[#EA6D27] text-white px-3 py-2 rounded-tl-xl rounded-br-xl"
+          >
+            Book a table
+          </button>
+
+          <!-- Hamburger -->
+          <button
+            id="menu-btn"
+            class="md:hidden focus:outline-none w-8 h-8 flex flex-col justify-between"
+          >
+            <span class="block h-[3px] bg-gray-700"></span>
+            <span class="block h-[3px] bg-gray-700"></span>
+            <span class="block h-[3px] bg-gray-700"></span>
+          </button>
+        </div>
       </div>
-      <div class="hidden md:block">
-        <ul class="flex gap-8">
-          <li class="hover:text-[#EA6D27]"><a href="#">Menu</a></li>
-          <li class="hover:text-[#EA6D27]"><a href="#">Events </a></li>
-          <li class="hover:text-[#EA6D27]"><a href="#">Gallery</a></li>
-          <li class="hover:text-[#EA6D27]"><a href="#">About</a></li>
-          <li class="hover:text-[#EA6D27]"><a href="#">Contact</a></li>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col gap-4 py-4 px-6">
+          <li><a href="#" class="hover:text-[#EA6D27]">Menu</a></li>
+          <li><a href="#" class="hover:text-[#EA6D27]">Events</a></li>
+          <li><a href="#" class="hover:text-[#EA6D27]">Gallery</a></li>
+          <li><a href="#" class="hover:text-[#EA6D27]">About</a></li>
+          <li><a href="#" class="hover:text-[#EA6D27]">Contact</a></li>
+          <li>
+            <button
+              class="w-full bg-[#EA6D27] text-white px-3 py-2 rounded-tl-xl rounded-br-xl"
+            >
+              Book a table
+            </button>
+          </li>
         </ul>
-      </div>
-      <div>
-        <button
-          class="bg-[#EA6D27] text-white px-3 py-2 rounded-tl-xl rounded-br-xl"
-        >
-          Book a table
-        </button>
       </div>
     </header>
 
-    <main>
+    <main class="pt-20 md:pt-28">
       <!-- Banner Section -->
       <section
-        class="w-8/12 mx-auto mt-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-16 md:py-24"
+        class="w-11/12 md:w-8/12 mx-auto mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-16 md:py-24"
       >
-        <!-- Left side -->
+        <!-- Left -->
         <div class="relative flex-1 text-center md:text-left">
-          <!-- Circle text -->
-          <div class="absolute -left-25 -mt-45 top-0 hidden md:block">
-            <svg viewBox="0 0 200 200" class="w-40 h-40">
-              <defs>
-                <path
-                  id="circlePath"
-                  d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
-                />
-              </defs>
-              <text
-                fill="black"
-                font-size="25"
-                letter-spacing="3"
-                font-family="David Libre, serif"
-              >
-                <textPath href="#circlePath">
-                  FOODS DELICIOUS FOODS DELICIOUS
-                </textPath>
-              </text>
-            </svg>
-          </div>
           <h2
             class="text-3xl md:text-5xl font-semibold leading-snug md:leading-tight max-w-md mx-auto md:mx-0"
           >
@@ -91,7 +109,7 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-          <!-- Buttons -->
+          
           <div class="flex justify-center md:justify-start gap-4 mt-8">
             <button
               class="bg-black text-white px-6 py-2 rounded-tl-xl rounded-br-xl hover:bg-gray-800 transition"
@@ -104,37 +122,23 @@
               Book a table
             </button>
           </div>
-
-          <!-- Social icons -->
-          <div class="flex justify-center md:justify-start gap-5 mt-10">
-            <img src="assets/logo/image 1.png" alt="facebook" class="w-6 h-6" />
-            <img
-              src="assets/logo/icons8-instagram 1.png"
-              alt="instagram"
-              class="w-6 h-6"
-            />
-            <img src="assets/logo/image 2.png" alt="twitter" class="w-6 h-6" />
-          </div>
         </div>
 
-        <!-- Right side (Images) -->
         <div class="relative flex-1 flex justify-center">
-          <!-- Background big image -->
           <img
             src="assets/resources/Mask group.png"
             alt="restaurant"
-            class="w-[300px] h-[500px] md:w-[516px] md:h-[716px] object-cover rounded-3xl"
+            class="w-[280px] h-[450px] md:w-[516px] md:h-[716px] object-cover rounded-3xl"
           />
-
-          <!-- Dish image -->
           <img
             src="assets/resources/dish-2 1.png"
             alt="dish"
-            class="absolute -bottom-4 -left-12 md:-bottom-6 md:-left-20 w-56 md:w-80 drop-shadow-2xl"
+            class="absolute -bottom-4 -left-6 md:-bottom-6 md:-left-20 w-44 md:w-80 drop-shadow-2xl"
           />
         </div>
       </section>
 
+     
       <!-- Dishes section -->
       <section class="text-center bg-gray-200 mt-20">
         <h1 class="text-5xl font-bold pt-15 pb-8">Our Special Dishes</h1>
@@ -151,27 +155,19 @@
           <div
             class="relative max-w-xs bg-white pt-16 pb-6 px-6 rounded-tl-4xl rounded-br-4xl shadow-lg text-center mx-auto"
           >
-            <!-- Dish with price -->
             <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40">
-              <!-- Dish image -->
               <img
                 src="assets/resources/dish-1 1.png"
                 alt="dish"
                 class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
               />
-
-              <!-- Price badge -->
               <div
                 class="absolute top-2 right-2 bg-black text-white text-sm font-semibold px-3 py-1 rounded-full shadow-md"
               >
                 $12
               </div>
             </div>
-
-            <!-- Title -->
             <h2 class="mt-20 mb-7 text-lg font-semibold">Lumpia with Suace</h2>
-
-            <!-- Description -->
             <p class="mt-2 text-sm text-gray-500 leading-relaxed">
               Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod
               tempor
@@ -181,27 +177,19 @@
           <div
             class="relative max-w-xs bg-white pt-16 pb-6 px-6 rounded-tl-4xl rounded-br-4xl shadow-lg text-center mx-auto"
           >
-            <!-- Dish with price -->
             <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40">
-              <!-- Dish image -->
               <img
                 src="assets/resources/dish-3 1.png"
                 alt="dish"
                 class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
               />
-
-              <!-- Price badge -->
               <div
                 class="absolute top-2 right-2 bg-black text-white text-sm font-semibold px-3 py-1 rounded-full shadow-md"
               >
                 $12
               </div>
             </div>
-
-            <!-- Title -->
             <h2 class="mt-20 mb-7 text-lg font-semibold">Fish and Veggie</h2>
-
-            <!-- Description -->
             <p class="mt-2 text-sm text-gray-500 leading-relaxed">
               Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod
               tempor
@@ -211,27 +199,19 @@
           <div
             class="relative max-w-xs bg-white pt-16 pb-6 px-6 rounded-tl-4xl rounded-br-4xl shadow-lg text-center mx-auto"
           >
-            <!-- Dish with price -->
             <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40">
-              <!-- Dish image -->
               <img
                 src="assets/resources/dish-4.png"
                 alt="dish"
                 class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
               />
-
-              <!-- Price badge -->
               <div
                 class="absolute top-2 right-2 bg-black text-white text-sm font-semibold px-3 py-1 rounded-full shadow-md"
               >
                 $12
               </div>
             </div>
-
-            <!-- Title -->
             <h2 class="mt-20 mb-7 text-lg font-semibold">Tofu Chili</h2>
-
-            <!-- Description -->
             <p class="mt-2 text-sm text-gray-500 leading-relaxed">
               Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod
               tempor
@@ -241,27 +221,19 @@
           <div
             class="relative max-w-xs bg-white pt-16 pb-6 px-6 rounded-tl-4xl rounded-br-4xl shadow-lg text-center mx-auto"
           >
-            <!-- Dish with price -->
             <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40">
-              <!-- Dish image -->
               <img
                 src="assets/resources/dish-1 1.png"
                 alt="dish"
                 class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
               />
-
-              <!-- Price badge -->
               <div
                 class="absolute top-2 right-2 bg-black text-white text-sm font-semibold px-3 py-1 rounded-full shadow-md"
               >
                 $12
               </div>
             </div>
-
-            <!-- Title -->
             <h2 class="mt-20 mb-7 text-lg font-semibold">Egg and Cocumber</h2>
-
-            <!-- Description -->
             <p class="mt-2 text-sm text-gray-500 leading-relaxed">
               Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod
               tempor
@@ -379,13 +351,130 @@
         <div
           class="flex flex-col md:flex-row items-center justify-center gap-8 pb-20"
         >
-          <img class="ml-45" src="assets/resources/Testimonial.png" alt="" />
+          <img class="ml-100" src="assets/resources/Testimonial.png" alt="" />
           <img src="assets/resources/Testimonial (1).png" alt="" />
         </div>
         <div class="flex justify-center items-center pb-6">
           <img src="assets/resources/Dot.png" alt="" />
         </div>
       </section>
+
+      <!-- Extra section -->
+      <section class="relative w-8/12 mx-auto my-16">
+        <img
+          src="assets/resources/cta-img-bg 1.png"
+          alt="CTA Background"
+          class="w-full rounded-3xl object-cover shadow-lg"
+        />
+        <div class="absolute inset-0 bg-black/40 rounded-3xl"></div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
+        >
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+            Get Or Promo Code by <br />
+            Subscribing To our Newsletter
+          </h2>
+          <p class="text-white/90 mb-6 max-w-md">
+            Stay updated with our latest offers, events, and delicious menu
+            updates.
+          </p>
+          <div
+            class="flex w-10/12 md:w-6/12 bg-white rounded-2xl overflow-hidden shadow-lg"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 px-4 py-3 outline-none"
+            />
+            <button
+              class="bg-[#EA6D27] text-white px-6 py-3 font-medium hover:bg-[#d95f20] transition"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="bg-white text-gray-700 py-12 px-6">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- Logo + Description -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img
+              src="assets/logo/flatware_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+              alt="Restaurant Logo"
+              class="w-8 h-8"
+            />
+            <h2 class="text-xl font-semibold">restaurant</h2>
+          </div>
+          <p class="text-sm text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.
+            <a href="#" class="text-[#EA6D27]">Learn more</a>
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-sm font-bold uppercase mb-4">Navigation</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-[#EA6D27]">Menu</a></li>
+            <li><a href="#" class="hover:text-[#EA6D27]">About us</a></li>
+            <li><a href="#" class="hover:text-[#EA6D27]">Contact us</a></li>
+            <li><a href="#" class="hover:text-[#EA6D27]">Main dishes</a></li>
+          </ul>
+        </div>
+
+        <!-- Dishes -->
+        <div>
+          <h3 class="text-sm font-bold uppercase mb-4">Dishes</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-[#EA6D27]">Fish & Veggies</a></li>
+            <li><a href="#" class="hover:text-[#EA6D27]">Tofu Chili</a></li>
+            <li><a href="#" class="hover:text-[#EA6D27]">Egg & Cucumber</a></li>
+            <li><a href="#" class="hover:text-[#EA6D27]">Lumpia w/Suace</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div>
+          <h3 class="text-sm font-bold uppercase mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#EA6D27] hover:text-white transition"
+            >
+              <img src="assets/logo/image 1.png" alt="">
+            </a>
+            <a
+              href="#"
+              class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#EA6D27] hover:text-white transition"
+            >
+             <img src="assets/logo/image 2.png" alt="">
+            </a>
+            <a
+              href="#"
+              class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#EA6D27] hover:text-white transition"
+            >
+              <img src="assets/logo/icons8-instagram 1.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div
+        class="w-8/12 mx-auto border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500"
+      >
+        <p>
+          © 2025 Restaurants. All Right Reserved. Designed by
+          <span class="text-[#EA6D27] font-medium">Rakib</span>
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-[#EA6D27]">Terms of Service</a>
+          <a href="#" class="hover:text-[#EA6D27]">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
